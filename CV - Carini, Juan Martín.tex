@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc} % Para caracteres especiales. 
 
 \usepackage[a4paper]{geometry} % Definimos estilos de página.
-\geometry{top=0cm, bottom=0cm, left=0.5cm, right=1cm} % Eliminamos todos los márgenes posibles.
+\geometry{top=0.5cm, bottom=0cm, left=0.5cm, right=0cm} % Eliminamos todos los márgenes posibles.
 
 %----------------------------------------------------------------------------------------------- 
 % TEXTO E ICONOS
@@ -62,6 +62,7 @@
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 \usepackage{graphicx} % Para la imagen de la cabecera.
+\usepackage{float} % Para poner imágenes donde queremos. 
 
 
 %----------------------------------------------------------------------------------------------- 
@@ -69,18 +70,15 @@
 %----------------------------------------------------------------------------------------------- 
 
 %----------------------------------------------------------------------------------------------- 
-% DEFINICIONES DE TABLA/ARRAY
+%   TABLA/ARRAY
 %----------------------------------------------------------------------------------------------- 
 
 \usepackage{array} % Para tener un mejor manejo de tablas.
 \usepackage{multirow}
 
-% \newcolumntype{x}[1]{%
-% >{\raggedleft\hspace{0pt}}p{#1}}% Columna personalizada, alineada a la derecha y con ancho fijo.Usamos p{tamaño} pero a través de x{tamaño}
 
-
-\usepackage{xstring, xifthen} % Nos proporcionan una prueba \isempty
-\usepackage[absolute,overlay]{textpos}
+% \usepackage{xstring, xifthen} % Nos proporcionan una prueba \isempty
+% \usepackage[absolute,overlay]{textpos}
 
 %----------------------------------------------------------------------------------------------- 
 %   SECCIONES DEL CV
@@ -102,7 +100,7 @@
 % Comando para la barra de progreso de habilidades:
 % Renders a progress-bar to indicate a certain skill in percent.
 % param 1: name of the skill / tech / etc.
-% param 3: percent, values range from 0 to 1
+% param 2: percent, values range from 0 to 1
 \newcommand{\cvskill}[2] {
     \vspace{0pt}
     \textcolor{black}{\textbf{#1}} 
@@ -121,9 +119,9 @@
 \begin{document}
 
 \columnratio{0.3} % Donde comienza la siguiente columna de texto.
-\setlength{\columnsep}{1em} % Sangria de la siguiente columna de texto.
-% \setlength{\columnseprule}{4pt} % Linea vertical entre columnas y su espesor.
-% \colseprulecolor{darkcol} % Color de la linea vertical.
+\setlength{\columnsep}{2em} % Sangria de la siguiente columna de texto.
+\setlength{\columnseprule}{4pt} % Linea vertical entre columnas y su espesor.
+\colseprulecolor{maingray} % Color de la linea vertical.
 
 \begin{paracol}{2}
 
@@ -133,12 +131,13 @@
 
 \begin{leftcolumn}
 
-    \begin{tikzpicture}[remember picture,overlay]
-        \node [rectangle, fill=sidecolor, anchor=north, minimum width=21.5cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-    \end{tikzpicture}
-
-    \begin{figure}[h]
-        \includegraphics[scale=0.18]{Foto.jpg}    
+    \begin{figure}[t]
+        \centering
+        \noindent    
+        \begin{tikzpicture}[remember picture,overlay]
+            \node [rectangle, fill=sidecolor, anchor=north, minimum width=16.5cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+        \end{tikzpicture}    
+        \includegraphics[width=\linewidth]{Foto.jpg}
     \end{figure}
     
     \cvsection{CONTACTO}
@@ -168,14 +167,24 @@
     \cvskill{Excel}    {0.8}
     \cvskill{LaTex}    {0.8}
 
-    
 \end{leftcolumn}
 
 \begin{rightcolumn}
 %===============================================================================================%
 %   CABECERA
 %===============================================================================================%
+\fcolorbox{white}{darkcol}{\begin{minipage}[c][5cm][c]{0.96\mpwidth}
+	\begin{center}
+		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{CARINI \\ JUAN MARTÍN} } } } \\[-12pt]
+		\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
+		\large{\textcolor{white} {Lic.\@ en Matemática \& Científico de Datos}}
+	\end{center}
+\end{minipage}}
+\vspace{6pt}
+
 \cvsection{EDUCACIÓN}
+
+
 
 \end{rightcolumn}
 
