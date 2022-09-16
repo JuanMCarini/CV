@@ -4,3 +4,6 @@
 *.fls
 *.log
 *.synctex.gz
+*.out
+# Diccionario:
+*.json
