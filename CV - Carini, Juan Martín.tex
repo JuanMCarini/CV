@@ -64,11 +64,6 @@
 \usepackage{graphicx} % Para la imagen de la cabecera.
 \usepackage{float} % Para poner imágenes donde queremos. 
 
-
-%----------------------------------------------------------------------------------------------- 
-% COSAS QUE NO SE SI VOY A USAR
-%----------------------------------------------------------------------------------------------- 
-
 %----------------------------------------------------------------------------------------------- 
 %   TABLA/ARRAY
 %----------------------------------------------------------------------------------------------- 
@@ -76,8 +71,11 @@
 \usepackage{array} % Para tener un mejor manejo de tablas.
 \usepackage{multirow}
 
+%----------------------------------------------------------------------------------------------- 
+%   PAQUETES LÓGICOS
+%----------------------------------------------------------------------------------------------- 
 
-% \usepackage{xstring, xifthen} % Nos proporcionan una prueba \isempty
+\usepackage{xstring, xifthen} % Nos proporcionan una prueba \isempty
 % \usepackage[absolute,overlay]{textpos}
 
 %----------------------------------------------------------------------------------------------- 
@@ -98,9 +96,8 @@
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
 
 % Comando para la barra de progreso de habilidades:
-% Renders a progress-bar to indicate a certain skill in percent.
-% param 1: name of the skill / tech / etc.
-% param 2: percent, values range from 0 to 1
+% * Param 1: nombre de la habilidad,
+% * Param 2: porcentaje (de 0 a 1).
 \newcommand{\cvskill}[2] {
     \vspace{0pt}
     \textcolor{black}{\textbf{#1}} 
@@ -111,6 +108,44 @@
   	\end{tikzpicture} 
     \vspace{2pt}
 }
+
+%----------------------------------------------------------------------------------------------- 
+%   EDUCACIÓN
+%----------------------------------------------------------------------------------------------- 
+
+\newcommand{\itemedu}[3]{
+    \vspace{2pt}
+    \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
+        {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
+        % \multicolumn{2}{l}{{\normalfont{#3}}} \\
+        {\normalfont{#3}} & \\
+    \end{tabular*}\\
+    \vspace{4pt}
+
+}
+
+%----------------------------------------------------------------------------------------------- 
+%   EXPERIENCIA LABORAL
+%----------------------------------------------------------------------------------------------- 
+
+\newcommand{\itememplo}[7]{
+    \vspace{2pt}
+    \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
+        {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
+        {\normalfont{#3}} & \\
+    \end{tabular*}
+    \ifthenelse{\isempty{#4}}{}{
+        \begin{itemize}
+            \item #4
+            \ifthenelse{\isempty{#5}}{}{\item #5}
+            \ifthenelse{\isempty{#6}}{}{\item #6}
+            \ifthenelse{\isempty{#7}}{}{\item #7}
+        \end{itemize}
+    }
+    \vspace{4pt}
+
+}
+
 
 %===============================================================================================%
 %   CONTENIDO DEL DOCUMENTO
@@ -165,7 +200,7 @@
     \cvskill{Python}   {0.4}
     \cvskill{Power BI} {0.5}
     \cvskill{Excel}    {0.8}
-    \cvskill{LaTex}    {0.8}
+    \cvskill{\LaTeX}    {0.8}
 
 \end{leftcolumn}
 
@@ -173,9 +208,9 @@
 %===============================================================================================%
 %   CABECERA
 %===============================================================================================%
-\fcolorbox{white}{darkcol}{\begin{minipage}[c][5cm][c]{0.96\mpwidth}
+\fcolorbox{white}{darkcol}{\begin{minipage}[c][4cm][c]{0.96\mpwidth}
 	\begin{center}
-		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{CARINI \\ JUAN MARTÍN} } } } \\[-12pt]
+		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{JUAN MARTÍN CARINI} } } } \\[-50pt]
 		\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
 		\large{\textcolor{white} {Lic.\@ en Matemática \& Científico de Datos}}
 	\end{center}
@@ -184,6 +219,77 @@
 
 \cvsection{EDUCACIÓN}
 
+    \itemedu{Data Science}
+    {Marzo 2022 a la actualidad}{Coderhouse}
+    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwgel_E2d7lqyOWQMaaQ}
+            {Licenciatura en Matemática}}
+            {Marzo 2010 a agosto de 2022}{Universidad Nacional del Sur}
+    \vspace{-6pt}
+    \hspace{0.2cm}\textit{\small\textbf{Materias Optativas:}}
+        \begin{itemize}
+            \footnotesize
+            \item \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q3BLmxwlzX5PWIFQ}{Principios de Computación I},
+            \item \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q45aG0UgNb-R70FA?e=44lo7C}{Introducción a los procesos estocásticos}.
+        \end{itemize} 
+
+    \itemedu{\href{https://www.coderhouse.com/certificados/620447e524e5820051a7aa74}
+            {Data Analytics}}
+            {Noviembre 2021 a febrero de 2022}{Coderhouse}
+
+\cvsection{Cursos y Congresos}
+
+    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q-or-wyygtVrYUuA?e=kgWNnG}
+            {Curso de Python Intermedio}}
+            {Agosto 2022}{Platzi}
+    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwg8E-4q6mPHI1jq7ZLA?e=p6oXwW}
+            {Curso Profesional de Git y GitHuB}}
+            {Agosto 2022}{Platzi}
+    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9MosO5ebGk9rRf-w}
+            {Reunión Anual de la UMA}}
+            {Septiembre 2013}{Universidad Nacional de Rosario} 
+    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9GYBGAGbHQCQqjzQ}
+            {XII Congreso Dr.\@ Antonio Monteiro}}
+            {Mayo 2013}{Universidad Nacional del Sur}
+    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8YJ8r2Zmf6BP7aYg?e=ayx34k}
+            {Introducción a Matlab}}
+            {Noviembre 2012}{Dictado por la Mg.\@ Flavia Buffo en la Universidad Nacional del Sur}
+    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8af6-T-A7NeXaSlw}
+            {Reunión Anual de Unión Matemática Argentina}}
+            {Agosto 2012}{Universidad Nacional de Cordoba}
+    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8dRt9t2V22iKrg2g?e=do4ZLA}
+            {XI Congreso Dr.\@ Antonio Monteiro}}
+            {Mayo 2011}{Universidad Nacional del Sur} 
+    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8ZvQ58VgOIVIDOTA}
+            {\LaTeX}}
+            {Junio 2012}{Dictado por el Dr.\@ Marcelo Falappa en la Universidad Nacional del Sur}
+    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8dRt9t2V22iKrg2g}
+            {XI Congreso Dr.\@ Antonio Monteiro}}
+            {Mayo 2011}{Universidad Nacional del Sur}
+
+\cvsection{Experiencia Laboral}
+
+    \itememplo{Veterinaria El Destete}
+    {Enero 2021 a febrero de 2022}
+    {Encargado}
+    {Atención de clientes}
+    {Encargado del stock}
+    {Actualización de precios en Marketplace (Facebook) y en la plataforma eCommerce}
+    {Responsable de entradas y salidas en caja y cierre diario de la misma}
+
+    \itememplo{Zammá Pasteleria \& Deco}
+    {Febrero 2012 a agosto de 2020}
+    {Vendedor}
+    {Asesoramiento a los clientes}
+    {Monitoreo de calidad y seguimiento de recepción de productos}
+    {}{}
+
+    \itememplo{Universidad Nacional del Sur}
+    {Marzo 2012 a junio de 2019}
+    {Ayudante alumno B}
+    {Encargado de resolver dudas a los alumnos}
+    {Corrección de exámenes parciales}
+    {Ayudante en las asignaturas: Elementos de Algebra y Geometría, Algebra y Geometría y Calculo II, siendo parte del equipo docente.}
+    {}
 
 
 \end{rightcolumn}
