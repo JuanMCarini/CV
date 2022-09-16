@@ -1,10 +1,10 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 
 \usepackage[spanish]{babel} % Idioma del CV en español.
 \usepackage[utf8]{inputenc} % Para caracteres especiales. 
 
 \usepackage[a4paper]{geometry} % Definimos estilos de página.
-\geometry{top=0.5cm, bottom=0cm, left=0.5cm, right=0cm} % Eliminamos todos los márgenes posibles.
+\geometry{top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm} % Eliminamos todos los márgenes posibles.
 
 %----------------------------------------------------------------------------------------------- 
 % TEXTO E ICONOS
@@ -71,6 +71,9 @@
 \usepackage{array} % Para tener un mejor manejo de tablas.
 \usepackage{multirow}
 
+% Achicamos el interlineado en los los listados de items:
+\let\olditemize\itemize\def\itemize{\olditemize\itemsep=-4pt }
+
 %----------------------------------------------------------------------------------------------- 
 %   PAQUETES LÓGICOS
 %----------------------------------------------------------------------------------------------- 
@@ -83,10 +86,10 @@
 %----------------------------------------------------------------------------------------------- 
 
 \newcommand{\cvsection}[1] {
-    \vspace{10pt}
+    \vspace{6pt}
 	\textbf{\Large{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
         \textcolor{maincol}{ \rule{0.1\textwidth}{2pt} } 
-    \vspace{8pt}
+    \vspace{4pt}
 	}
 
 %----------------------------------------------------------------------------------------------- 
@@ -114,13 +117,13 @@
 %----------------------------------------------------------------------------------------------- 
 
 \newcommand{\itemedu}[3]{
-    \vspace{2pt}
+    \vspace{0pt}
     \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
         {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
         % \multicolumn{2}{l}{{\normalfont{#3}}} \\
         {\normalfont{#3}} & \\
     \end{tabular*}\\
-    \vspace{4pt}
+    \vspace{2pt}
 
 }
 
@@ -129,7 +132,7 @@
 %----------------------------------------------------------------------------------------------- 
 
 \newcommand{\itememplo}[7]{
-    \vspace{2pt}
+    \vspace{0pt}
     \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
         {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
         {\normalfont{#3}} & \\
@@ -142,7 +145,7 @@
             \ifthenelse{\isempty{#7}}{}{\item #7}
         \end{itemize}
     }
-    \vspace{4pt}
+    \vspace{2pt}
 
 }
 
@@ -208,7 +211,7 @@
 %===============================================================================================%
 %   CABECERA
 %===============================================================================================%
-\fcolorbox{white}{darkcol}{\begin{minipage}[c][4cm][c]{0.96\mpwidth}
+\fcolorbox{white}{darkcol}{\begin{minipage}[c][3cm][c]{0.99\mpwidth}
 	\begin{center}
 		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{JUAN MARTÍN CARINI} } } } \\[-50pt]
 		\textcolor{white}{ \rule{0.1\textwidth}{1.25pt} } \\[4pt]
