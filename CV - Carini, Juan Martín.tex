@@ -1,7 +1,42 @@
-\documentclass[a4paper]{article}
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper]{geometry} % Definimos estilos de página.
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} % eliminamos todos los márgenes posibles.
+
+\usepackage{fetamont} % Fuente.
+\usepackage[T1]{fontenc} % Si no usamos este paquete::
+                            % * Las palabras que contienen caracteres acentuados no se pueden separar automáticamente,
+                            % * No se puede copiar y pegar correctamente tales palabras de la salida (DVI/PS/PDF),
+                            % * Y caracteres como el signo de barra vertical, el signo menor que y el signo mayor dan resultados inesperados en el texto.
+\usepackage{moresize} % Más tamaños de fuentes.
+
+\usepackage{xcolor} %Para poner un poco de color con el comando \color{}.
+\usepackage{ragged2e} % Alineación del texto.
+\usepackage{fontawesome} % Set de iconos.
+\usepackage{paracol} % Para mostrar dos columnas rompibles.
+
+\usepackage{fancyhdr} % Nos proporciona amplias funciones, tanto para construir encabezados y pies de página, como para controlar su uso (por ejemplo, en momentos en que LATEX cambiaría automáticamente el estilo de encabezado en uso).
+\pagestyle{empty} % Este comando produce cabeceras y pies de paginas vacíos - sin números de página.
+
+\setlength{\parindent}{0mm} % Determinas la sangría en cero.
+
+%----------------------------------------------------------------------------------------------- 
+% DEFINICIONES DE TABLA/ARRAY
+%----------------------------------------------------------------------------------------------- 
+
+\usepackage{array} % Para tener un mejor manejo de tablas.
+
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}% Columna personalizada, alineada a la derecha y con ancho fijo.Usamos p{tamaño} pero a través de x{tamaño}
+
+
+\usepackage{xstring, xifthen} % Nos proporcionan una prueba \isempty
+\usepackage[absolute,overlay]{textpos}
 
 \begin{document}
     
-    Hola mundo!
-    
+    {\color{red} Hola mundo! } \faPhone.
+
 \end{document}
