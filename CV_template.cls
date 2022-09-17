@@ -87,12 +87,28 @@
 %----------------------------------------------------------------------------------------------- 
 
 \newcommand{\cvsection}[1] {
-    \vspace{6pt}
+    \vspace{10pt}
 	\textbf{\Large{\textcolor{darkcol}{\uppercase{#1}}}}\\[-4pt]
         \textcolor{maincol}{ \rule{0.1\textwidth}{2pt} } 
-    \vspace{4pt}
+    \vspace{15pt}
 	}
 
+%----------------------------------------------------------------------------------------------- 
+%   INFORMACIÓN DE CONTACTO
+%----------------------------------------------------------------------------------------------- 
+
+\newcommand{\infocont}[7]{
+    \begin{tabular}{cl}
+        {\color{maincol}\faCalendar}                             & #1  \\ [6pt]
+        \multirow{2}{*}{{\color{maincol}\faInfoCircle}}          & #2  \\ 
+                                                                 & #3  \\ [6pt]
+        {\color{maincol}\faAt}                                   & #4  \\ [6pt]
+        {\color{maincol}\faPhone}                                & #5  \\ [6pt]
+        {\color{maincol}\faGithub}                               & #6  \\ [6pt]
+        {\color{maincol}\faLinkedinSquare}                       & #7    
+    \end{tabular}
+    \vspace{10pt}
+}
 %----------------------------------------------------------------------------------------------- 
 %   HABILIDADES
 %----------------------------------------------------------------------------------------------- 
@@ -110,7 +126,7 @@
 		\fill [lightgray] (0,0) rectangle (1\mpwidth, 0.15);
 		\fill [maincol] (0,0) rectangle (#2\mpwidth, 0.15);
   	\end{tikzpicture} 
-    \vspace{2pt}
+    \vspace{10pt}
 }
 
 %----------------------------------------------------------------------------------------------- 
@@ -120,7 +136,7 @@
 \newcommand{\itemedu}[3]{
     \vspace{0pt}
     \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
-        {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
+        {\large\textbf{#1}} & {\color{red}\lowercase{\textit{#2}}} \\ 
         % \multicolumn{2}{l}{{\normalfont{#3}}} \\
         {\normalfont{#3}} & \\
     \end{tabular*}\\
@@ -135,7 +151,7 @@
 \newcommand{\itememplo}[7]{
     \vspace{0pt}
     \begin{tabular*}{13.5cm}{l@{\extracolsep{\fill}}r}
-        {\large\textbf{#1}} & {\color{red}\textit{#2}} \\ 
+        {\large\textbf{#1}} & {\color{red}\lowercase{\textit{#2}}} \\ 
         {\normalfont{#3}} & \\
     \end{tabular*}
     \ifthenelse{\isempty{#4}}{}{
