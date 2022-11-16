@@ -130,7 +130,14 @@
 }
 
 % Comando para habilidades en texto:
-\newcommand{\cvtexskill}[2] {
+\newcommand{\cvtexskill}[1] {
+    \vspace{0pt}
+    {\large\textbf{#1}}
+    
+    \vspace{10pt}
+}
+
+\newcommand{\languaje}[2] {
     \vspace{0pt}
     {\large\textbf{#1}:}
     \vspace{2pt}
@@ -140,6 +147,20 @@
 
 }
 
+%----------------------------------------------------------------------------------------------- 
+%   MEMBRESIAS
+%----------------------------------------------------------------------------------------------- 
+
+% Comando para habilidades en texto:
+\newcommand{\membresias}[2] {
+    \vspace{0pt}
+    {\large\textbf{#1}:}
+    \vspace{2pt}
+
+    \;\textit{#2}
+    \vspace{10pt}
+
+}
 
 
 %----------------------------------------------------------------------------------------------- 
