@@ -1,10 +1,18 @@
+\ProvidesClass{CV_template}[2026/08/16 Harvard Style CV class]
 \NeedsTeXFormat{LaTeX2e}
+
+% Declaración de opciones de idioma
+\DeclareOption{english}{\PassOptionsToPackage{english}{babel}}
+\DeclareOption{spanish}{\PassOptionsToPackage{spanish,es-lcroman}{babel}}
+\ExecuteOptions{spanish}
+\ProcessOptions\relax
+
 \LoadClass[10pt,a4paper]{article}
 
 %----------------------------------------------------------------------------------------------- 
 % IDIOMA, CODIFICACIÓN Y MÁRGENES
 %-----------------------------------------------------------------------------------------------
-\RequirePackage[spanish,es-lcroman]{babel}
+\RequirePackage{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
@@ -116,7 +124,7 @@
     \noindent%
     \begin{minipage}[t]{0.68\textwidth}%
         \textbf{#1}\\%
-        \textit{\textcolor{subtext}{Tecnologías: #2}}%
+        \textit{\textcolor{subtext}{\iflanguage{english}{Technologies:}{Tecnologías:} #2}}%
     \end{minipage}%
     \hfill%
     \begin{minipage}[t]{0.31\textwidth}%
