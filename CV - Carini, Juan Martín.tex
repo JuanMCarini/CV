@@ -1,247 +1,158 @@
 \documentclass{CV_template}
 
-%===============================================================================================%
-%   CONTENIDO DEL DOCUMENTO
-%===============================================================================================%
-
 \begin{document}
 
-\columnratio{0.3} % Donde comienza la siguiente columna de texto.
-\setlength{\columnsep}{2em} % Sangria de la siguiente columna de texto.
-\setlength{\columnseprule}{4pt} % Linea vertical entre columnas y su espesor.
-\colseprulecolor{maingray} % Color de la linea vertical.
-
-\begin{paracol}{2}
+%===============================================================================================%
+%   ENCABEZADO
+%===============================================================================================%
+\cvheader{Juan Martín Carini}
+{Licenciado en Matemática | Analista de Datos \& Finanzas}
+{
+    \faMapMarker\ Bahía Blanca, Buenos Aires, Argentina \quad \textbar \quad
+    \faPhone\ +54 291 414 3811 \quad \textbar \quad
+    \faEnvelope\ \href{mailto:juanmcarini@gmail.com}{juanmcarini@gmail.com} \\[2.5pt]
+    \faLinkedinSquare\ \href{https://www.linkedin.com/in/juanmcarini}{linkedin.com/in/juanmcarini {\footnotesize\faExternalLink}} \quad \textbar \quad
+    \faGithub\ \href{https://github.com/JuanMCarini}{github.com/JuanMCarini {\footnotesize\faExternalLink}}
+}
 
 %===============================================================================================%
-%   BARRA LATERAL
+%   SOBRE MÍ
 %===============================================================================================%
-
-\begin{leftcolumn}
-
-    \begin{figure}[t]
-        \centering
-        \noindent    
-        \begin{tikzpicture}[remember picture,overlay]
-            \node [rectangle, fill=sidecolor, anchor=north, minimum width=16.5cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
-        \end{tikzpicture}    
-        \includegraphics[width=\linewidth]{Foto.jpg}
-    \end{figure}
-    
-    \cvsection{CONTACTO}
-
-    \begin{tabular}{cl}
-        % {\color{maincol}\faCalendar}                           & 01 de abril de 1992                                                                          \\ [6pt]
-        \multirow{2}{*}{{\color{maincol}\faInfoCircle}}          & \href{https://goo.gl/maps/ciK9KomkCkJ7PdWt5}{Bahía Blanca, Buenos Aires,}                    \\ 
-                                                                 & \href{https://goo.gl/maps/ciK9KomkCkJ7PdWt5}{Argentina {\footnotesize\faExternalLink}}       \\ [6pt]
-        {\color{maincol}\faAt}                                   & \href{mailto:juanmcarini@gmail.com}{juanmcarini@gmail.com}                                   \\ [6pt]
-        {\color{maincol}\faPhone}                                & +54 291 414 3811                                                                             \\ [6pt]
-        {\color{maincol}\faGithub}                               & \href{https://github.com/JuanMCarini}{JuanMCarini {\footnotesize\faExternalLink}}            \\ [6pt]
-        {\color{maincol}\faLinkedinSquare}                       & \href{https://www.linkedin.com/in/juanmcarini}{juanmcarini {\footnotesize\faExternalLink}}
-    \end{tabular}
-    \vspace{10pt}
-
-    \cvsection{APTITUDES}
-
-    % \cvskill{SQL}      {0.3} 
-    % \cvskill{Python}   {0.4}
-    % \cvskill{Power BI} {0.5}
-    % \cvskill{Excel}    {0.8}
-    % \cvskill{\LaTeX}    {0.8}
-
-
-    \cvtexskill{SQL}      %{Básico} 
-    \cvtexskill{Python}   %{Básico}
-    \cvtexskill{Power BI} %{Intermedio}
-    \cvtexskill{Excel}    %{Intermedio}
-    \cvtexskill{\LaTeX}   %{Avanzado}
-
-    \cvsection{IDIOMAS}
-
-    \languaje{Español} {Nativo}
-    \languaje{Inglés}  {Intermedio}
-
-    \cvsection{MEMBRESIAS}
-
-    \membresias{Platzi}{Desde el 22 de agosto del 2022 hasta la actualidad}
-    \membresias{Sociedad Argentina de Estadística}{Desde el 29 de junio del 2022 hasta la actualidad}
-    
-\end{leftcolumn}
-
-\begin{rightcolumn}
+\cvsection{Sobre mí}
+Licenciado en Matemática con sólida formación analítica, cuantitativa y estadística, especializado en Análisis de Datos, Modelado y Finanzas. Cuento con experiencia en la recopilación, depuración, conciliación y análisis de información financiera y contable, así como en el diseño de reportes y tableros interactivos mediante SQL, Python, Excel Avanzado (Power Query) y Power BI. Apasionado por transformar grandes volúmenes de datos complejos en información estratégica para la toma de decisiones, orientado a posiciones de Analista de Datos y Data Science.
 
 %===============================================================================================%
-%   CABECERA
+%   EXPERIENCIA LABORAL
 %===============================================================================================%
-
-\fcolorbox{white}{darkcol}{\begin{minipage}[c][3cm][c]{0.99\mpwidth}
-	\begin{center}
-		\HUGE{ \textbf{ \textcolor{white}{ \uppercase{JUAN MARTÍN CARINI} } } } \\[-60pt]
-		\textcolor{white}{ \rule{0.1\textwidth}{2pt} } \\[4pt]
-		\large{\textcolor{white} {Lic.\@ en Matemática \& Data Scientist}}
-	\end{center}
-\end{minipage}}
-\vspace{6pt}
-
-\cvsection{EDUCACIÓN}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwhLl3kbwqZnLPbGGHFg?e=MsCJnp}
-            {Licenciatura en Matemática \normalfont{\footnotesize\faExternalLink}}}
-            {Marzo 2010 a agosto de 2022}{Universidad Nacional del Sur}        
-    \vspace{-6pt}
-    \hspace{0.2cm}\textit{\small\textbf{Materias Optativas:}}
-    \vspace{-6pt}
-        \begin{itemize}
-            \footnotesize
-            \item \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q3BLmxwlzX5PWIFQ}{Principios de Computación I  {\footnotesize\faExternalLink}},
-            \item \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q45aG0UgNb-R70FA?e=44lo7C}{Introducción a los procesos estocásticos  {\footnotesize\faExternalLink}}.
-        \end{itemize} 
-
-\cvsection{Cursos}
-    
-    % \itemedu{\href{}
-    % {Nombre Curso \normalfont{\footnotesize\faExternalLink}}}
-    % {mmmmm yyyy}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/EVnJWRVShsFJr6mVXg-Gw3QBBe3O7I05TDollxYdFO5gnA?e=IE0m8i}
-    {Inteligencia Artificial para Finanzas \normalfont{\footnotesize\faExternalLink}}}
-    {marzo 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/Ea2u3MxlfsRAiWasfE_v774BGVOSQ0Hs9Yl3yZdi7bUBCg?e=xknUBF}
-    {Introducción a la Inteligencia Artificial \normalfont{\footnotesize\faExternalLink}}}
-    {febrero 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ETqGpb-TXlpBgWX7mAN3AtkBJjdg360DEOucnqe_6xvf6Q?e=fzIKOz}
-    {Chat GPT \normalfont{\footnotesize\faExternalLink}}}
-    {febrero 2025}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ER2c3gi0bbxJpy_LyD32EWoBiIo6qw9aIM2H8w6FTtERyw?e=Bit5c8}
-    {SQL y MySQL \normalfont{\footnotesize\faExternalLink}}}
-    {octubre 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/EWrQIQxM87pGoI5kftKO55UB9X6jHGBvrQinGOW3GI35AQ?e=Zeu6MU}
-    {Python: PIP y Entornos Virtuales \normalfont{\footnotesize\faExternalLink}}}
-    {febrero 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ETxDfRvpmQZMl91JDM4dhlUBIhVrFycVc8Khm-oy-2TKxg?e=uGPiYs}
-    {Python: Comprehensions, Funciones y Errores \normalfont{\footnotesize\faExternalLink}}}
-    {febrero 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ER_Bwg1StvxEmSmU-do_dtIBtTLRtp3OZmm5V8aXiYprlg?e=QRbDzU}
-    {Introducción a Machine Learning \normalfont{\footnotesize\faExternalLink}}}
-    {febrero 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwirp_EWpAhi231GpUAw?e=vJPuIp}
-            {Excel Avanzado con Macros \normalfont{\footnotesize\faExternalLink}}}
-            {Febrero 2024}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwirp-SCCQoCPtDuJe4Q?e=MuVGye}
-            {Álgebra Lineal con Python \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidUbea2CWPq31mq8TQ?e=i2YTtA}
-            {Fundamentos de Python \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwid8hAfTMmYFbzb_FxA?e=NAfPuv}
-        {Estadística no paramétrica \normalfont{\footnotesize\faExternalLink}}}
-        {Octubre 2022}{Sociedad Argentina de Estadística}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidUi819YblqzkYxHrw?e=ms1KXE}
-            {Mat.\ para Data.\ Sc.\ e Int. Artificial \normalfont{\footnotesize\faExternalLink}}}
-            {Octubre 2022}{Platzi} 
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidogceFfcn13HZjRKA?e=EZBGHl}
-            {Intr.\ al análisis de series de tiempo con Python \normalfont{\footnotesize\faExternalLink}}}
-            {Septiembre 2022}{Sociedad Argentina Estadística}   
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidUVrrgkq8GpgHWrcw?e=HfdEPl}{POO y Algoritmos con Python \normalfont{\footnotesize\faExternalLink}}}
-            {Septiembre 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwirp9iu23tExTjti1_w?e=6KhRYf}{Estadística Cumputacional con Python \normalfont{\footnotesize\faExternalLink}}}
-            {Septiembre 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/i/c/70b86248f6b6ff7a/EXr_tvZIYrgggHC5SgIAAAABlgq2gAcFPSQntacC2TVN7g?e=H3DTNi}{Carrera de Data Scientist \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2021 a septiembre del 2022}{Consta de dos cursos en Coderhouse}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q-or-wyygtVrYUuA?e=kgWNnG}
-            {Python Intermedio \normalfont{\footnotesize\faExternalLink}}}
-            {Agosto 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwg8E-4q6mPHI1jq7ZLA?e=p6oXwW}
-            {Profesional de Git y GitHuB \normalfont{\footnotesize\faExternalLink}}}
-            {Agosto 2022}{Platzi}
-
-    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8YJ8r2Zmf6BP7aYg?e=ayx34k}
-            {Introducción a Matlab \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2012}{%Dictado por la Mg.\@ Flavia Buffo en la 
-            Universidad Nacional del Sur}
-
-    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8ZvQ58VgOIVIDOTA}
-            {\LaTeX\,\normalfont{\footnotesize\faExternalLink}}}
-            {Junio 2012}{%Dictado por el Dr.\@ Marcelo Falappa en la 
-            Universidad Nacional del Sur}
-
-
-\cvsection{Congresos}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidR37GyX8JbHkHBeGA?e=D9ooCM}{XLIX Coloquio Argentino de Estadística \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2022}{Sociedad Argentina de Estadística}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwidR4_kL8_XpkJeDw7w?e=JPBoeX}{VII Jornada de Enseñanza de la Estadística \normalfont{\footnotesize\faExternalLink}}}
-            {Noviembre 2022}{Sociedad Argentina de Estadística}
-
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9MosO5ebGk9rRf-w}
-            {Reunión Anual de la UMA \normalfont{\footnotesize\faExternalLink}}}
-            {Septiembre 2013}{Universidad Nacional de Rosario} 
-            
-    \itemedu{\href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9GYBGAGbHQCQqjzQ}
-            {XII Congreso Dr.\@ Antonio Monteiro \normalfont{\footnotesize\faExternalLink}}}
-            {Mayo 2013}{Universidad Nacional del Sur}
-
-    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8af6-T-A7NeXaSlw}
-            {Reunión Anual de Unión Matemática Argentina \normalfont{\footnotesize\faExternalLink}}}
-            {Agosto 2012}{Universidad Nacional de Cordoba}
-
-    \itemedu{\href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8dRt9t2V22iKrg2g}
-            {XI Congreso Dr.\@ Antonio Monteiro \normalfont{\footnotesize\faExternalLink}}}
-            {Mayo 2011}{Universidad Nacional del Sur}
-
-
 \cvsection{Experiencia Laboral}
 
-    \itememplo{Fideicomisos de Inversión S.A.}
-    {Mayo de 2023 a la actualidad}
-    {Analista de Datos Financieros}
-    {Recopilación, limpieza y análisis de datos}
-    {Evaluación y validación de resultados contables}
-    {Comunicación efectiva de resultados}
-    {}
+\cvexperience{Administración y Finanzas}{Credise S.A.}{Febrero 2026 -- Actualidad}{Bahía Blanca, Argentina}
+\begin{itemize}
+    \item Administrar y optimizar procesos administrativos y financieros aplicando análisis cuantitativo y automatización de flujos de datos.
+    \item Analizar bases de datos operativas para conciliar cuentas, gestionar cobranzas y realizar el seguimiento de créditos y riesgos.
+    \item Diseñar y elaborar reportes analíticos de control de gestión y métricas clave para la toma de decisiones directivas.
+    \item Coordinar la gestión administrativa y documental con entidades financieras y clientes comerciales.
+\end{itemize}
 
-    \itememplo{Veterinaria El Destete}
-    {Enero 2021 a febrero de 2022}
-    {Encargado}
-    {Atención al público}
-    {Encargado del stock}
-    {Actualización de precios en Marketplace (Facebook) y en la plataforma eCommerce}
-    {Responsable de entradas y salidas en caja y cierre diario de la misma}
-    
-    \itememplo{Zammá Pasteleria \& Deco}
-    {Febrero 2012 a agosto de 2020}
-    {Vendedor}
-    {Atención al público}
-    {Monitoreo de calidad y seguimiento de recepción de productos}{}{}
-    
-    \itememplo{Universidad Nacional del Sur}
-    {Marzo 2012 a junio de 2019}
-    {Ayudante alumno B}
-    {Asistencia a alumnos}
-    {Corrección de exámenes parciales}
-    {En las asignaturas: Elementos de Algebra y Geometría, Algebra y Geometría y Calculo II.}{}
+\cvexperience{Analista de Datos Financieros}{Fideicomisos de Inversión S.A.}{Mayo 2023 -- Febrero 2026}{Bahía Blanca, Argentina}
+\begin{itemize}
+    \item Recopilar, limpiar, estructurar y analizar bases de datos contables y financieras correspondientes a múltiples fideicomisos.
+    \item Evaluar, conciliar y validar resultados financieros para asegurar la integridad, trazabilidad y consistencia de los balances.
+    \item Administrar y adaptar la operativa financiera y contable ante modificaciones contractuales y requerimientos solicitados por el Fondo Común de Inversión (FCI).
+    \item Implementar consultas en SQL y scripts en Python para automatizar el procesamiento de datos y la generación de reportes periódicos.
+    \item Diseñar y presentar informes ejecutivos y tableros con métricas clave para la toma de decisiones gerenciales.
+\end{itemize}
 
+\cvexperience{Encargado de Local y Gestión Comercial}{Veterinaria El Destete}{Enero 2021 -- Febrero 2022}{Bahía Blanca, Argentina}
+\begin{itemize}
+    \item Atender y asesorar a clientes de forma personalizada, gestionando la venta directa de insumos veterinarios.
+    \item Administrar el control de inventario, reposición y control integral de stock.
+    \item Actualizar periódicamente catálogos y listas de precios en la plataforma eCommerce y Marketplace de Facebook.
+    \item Coordinar cobros, pagos a proveedores, arqueos de caja y conciliaciones de cierre diario.
+\end{itemize}
 
-\end{rightcolumn}
+\cvexperience{Vendedor y Control de Calidad}{Zammá Pastelería \& Deco}{Febrero 2012 -- Agosto 2020}{Bahía Blanca, Argentina}
+\begin{itemize}
+    \item Atender al público y gestionar el proceso integral de comercialización y ventas en salón.
+    \item Monitorear la calidad de los productos y coordinar el seguimiento de recepción y despacho de mercadería.
+\end{itemize}
 
-\end{paracol}
+\cvexperience{Ayudante Alumno B}{Universidad Nacional del Sur}{Marzo 2012 -- Junio 2019}{Bahía Blanca, Argentina}
+\begin{itemize}
+    \item Asistir y guiar pedagógicamente a estudiantes universitarios en clases prácticas y consultas teórico-prácticas.
+    \item Calificar evaluaciones parciales y trabajos prácticos en las cátedras: Elementos de Álgebra y Geometría, Álgebra y Geometría, y Cálculo II.
+\end{itemize}
+
+%===============================================================================================%
+%   FORMACIÓN ACADÉMICA
+%===============================================================================================%
+\cvsection{Formación Académica}
+
+\cveducation{Licenciatura en Matemática}{Universidad Nacional del Sur}{Marzo 2010 -- Agosto 2022}{Graduado}
+\begin{itemize}
+    \item \href{https://1drv.ms/b/s!Anr_tvZIYrhwhLl3kbwqZnLPbGGHFg?e=MsCJnp}{Certificado de Título / Analítico {\footnotesize\faExternalLink}}
+    \item \textit{Materias optativas de orientación:}\ \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q3BLmxwlzX5PWIFQ}{Principios de Computación I {\footnotesize\faExternalLink}}, \href{https://1drv.ms/b/s!Anr_tvZIYrhwg-Q45aG0UgNb-R70FA?e=44lo7C}{Introducción a los Procesos Estocásticos {\footnotesize\faExternalLink}}.
+\end{itemize}
+
+%===============================================================================================%
+%   PÁGINA 2: PROYECTOS, CURSOS, HABILIDADES, IDIOMAS Y CONGRESOS
+%===============================================================================================%
+\newpage
+
+%===============================================================================================%
+%   PROYECTOS DESTACADOS
+%===============================================================================================%
+\cvsection{Proyectos Destacados}
+
+\cvproject{Credit Manager -- Sistema de Gestión y Analítica Crediticia}
+{Python (Pandas, NumPy-Financial, SQLAlchemy), FastAPI, SQLite, React}
+{\href{https://github.com/JuanMCarini/Credit_Manager}{GitHub / Credit\_Manager {\footnotesize\faExternalLink}}}
+\begin{itemize}
+    \item Desarrollar una aplicación en Python y SQL para administración, auditoría y análisis financiero de carteras de crédito (Sistema Francés).
+    \item Diseñar pipelines ETL masivos, transacciones ACID para cobranzas y cálculo vectorial optimizado de saldos y punitorios.
+    \item Implementar API REST en FastAPI y dashboard analítico en React con KPIs de mora y simulación de préstamos.
+\end{itemize}
+
+\cvproject{Modelo Predictivo y Análisis Socioeconómico (Encuesta de Hogares)}
+{Python (Pandas, Scikit-Learn, NumPy, Matplotlib, Seaborn), Jupyter}
+{\href{https://github.com/JuanMCarini/CoderHouse_DataScience_ProyectoFinal}{GitHub / DataScience\_ProyectoFinal {\footnotesize\faExternalLink}}}
+\begin{itemize}
+    \item Realizar análisis exploratorio de datos (EDA), correlaciones multivariables y análisis geoespacial sobre datasets de CABA.
+    \item Implementar y calibrar modelos de Machine Learning (Random Forest, Decision Trees) con optimización de hiperparámetros.
+\end{itemize}
+
+%===============================================================================================%
+%   CURSOS Y CERTIFICACIONES
+%===============================================================================================%
+\cvsection{Cursos y Certificaciones}
+
+\cvcourse{Inteligencia Artificial para Finanzas}{Platzi}{Marzo 2024}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/EVnJWRVShsFJr6mVXg-Gw3QBBe3O7I05TDollxYdFO5gnA?e=IE0m8i}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{Introducción a la Inteligencia Artificial}{Platzi}{Febrero 2024}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/Ea2u3MxlfsRAiWasfE_v774BGVOSQ0Hs9Yl3yZdi7bUBCg?e=xknUBF}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{ChatGPT y Aplicaciones de IA}{Platzi}{Febrero 2025}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ETqGpb-TXlpBgWX7mAN3AtkBJjdg360DEOucnqe_6xvf6Q?e=fzIKOz}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{SQL y MySQL}{Platzi}{Octubre 2024}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ER2c3gi0bbxJpy_LyD32EWoBiIo6qw9aIM2H8w6FTtERyw?e=Bit5c8}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{Python: PIP, Entornos Virtuales, Funciones y Estructuras}{Platzi}{Febrero 2024}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/EWrQIQxM87pGoI5kftKO55UB9X6jHGBvrQinGOW3GI35AQ?e=Zeu6MU}{Certificado 1 {\footnotesize\faExternalLink}} \textbar\ \href{https://1drv.ms/b/c/70b86248f6b6ff7a/ETxDfRvpmQZMl91JDM4dhlUBIhVrFycVc8Khm-oy-2TKxg?e=uGPiYs}{Certificado 2 {\footnotesize\faExternalLink}}}
+
+\cvcourse{Introducción a Machine Learning}{Platzi}{Febrero 2024}{\href{https://1drv.ms/b/c/70b86248f6b6ff7a/ER_Bwg1StvxEmSmU-do_dtIBtTLRtp3OZmm5V8aXiYprlg?e=QRbDzU}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{Excel Avanzado con Macros y VBA}{Platzi}{Febrero 2024}{\href{https://1drv.ms/b/s!Anr_tvZIYrhwirp_EWpAhi231GpUAw?e=vJPuIp}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{Carrera de Data Scientist}{Coderhouse}{Nov. 2021 -- Sep. 2022}{\href{https://1drv.ms/i/c/70b86248f6b6ff7a/EXr_tvZIYrgggHC5SgIAAAABlgq2gAcFPSQntacC2TVN7g?e=H3DTNi}{Certificado {\footnotesize\faExternalLink}}}
+
+\cvcourse{Estadística no Paramétrica y Análisis de Series de Tiempo con Python}{Sociedad Argentina de Estadística}{Septiembre -- Octubre 2022}{\href{https://1drv.ms/b/s!Anr_tvZIYrhwid8hAfTMmYFbzb_FxA?e=NAfPuv}{Certificado 1 {\footnotesize\faExternalLink}} \textbar\ \href{https://1drv.ms/b/s!Anr_tvZIYrhwidogceFfcn13HZjRKA?e=EZBGHl}{Certificado 2 {\footnotesize\faExternalLink}}}
+
+\cvcourse{Profesional de Git y GitHub}{Platzi}{Agosto 2022}{\href{https://1drv.ms/b/s!Anr_tvZIYrhwg8E-4q6mPHI1jq7ZLA?e=p6oXwW}{Certificado {\footnotesize\faExternalLink}}}
+
+%===============================================================================================%
+%   HABILIDADES
+%===============================================================================================%
+\cvsection{Habilidades}
+
+\noindent
+\textbf{Habilidades Técnicas:}\ SQL (MySQL), Python (Pandas, NumPy, Scikit-Learn, Statsmodels), Excel Avanzado (Power Query, Macros / VBA, Tablas Dinámicas), Power BI, Git \& GitHub, \LaTeX, R / Matlab, Análisis Estadístico, Modelado Matemático y Financiero. \\[4pt]
+\textbf{Competencias Profesionales:}\ Pensamiento analítico y resolución de problemas complejos, comunicación asertiva y presentación de resultados a perfiles técnicos y de negocio, trabajo en equipo interdisciplinario, rigurosidad metodológica, proactividad y adaptabilidad.
+
+%===============================================================================================%
+%   IDIOMAS
+%===============================================================================================%
+\cvsection{Idiomas}
+
+\noindent
+\textbf{Español:}\ Nativo \quad \textbar \quad
+\textbf{Inglés:}\ Intermedio (B2)
+
+%===============================================================================================%
+%   CONGRESOS Y JORNADAS
+%===============================================================================================%
+\cvsection{Congresos y Jornadas Académicas}
+
+\begin{itemize}
+    \item \textbf{XLIX Coloquio Argentino de Estadística \& VII Jornada de Enseñanza de la Estadística} (Noviembre 2022, Sociedad Argentina de Estadística). \href{https://1drv.ms/b/s!Anr_tvZIYrhwidR37GyX8JbHkHBeGA?e=D9ooCM}{Certificado 1 {\footnotesize\faExternalLink}} \textbar\ \href{https://1drv.ms/b/s!Anr_tvZIYrhwidR4_kL8_XpkJeDw7w?e=JPBoeX}{Certificado 2 {\footnotesize\faExternalLink}}
+    \item \textbf{Reuniones Anuales de la Unión Matemática Argentina (UMA)} (Rosario 2013, Córdoba 2012). \href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9MosO5ebGk9rRf-w}{Certificado 1 {\footnotesize\faExternalLink}} \textbar\ \href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8af6-T-A7NeXaSlw}{Certificado 2 {\footnotesize\faExternalLink}}
+    \item \textbf{XI y XII Congresos Dr. Antonio Monteiro} (Mayo 2011, Mayo 2013, Universidad Nacional del Sur). \href{https://1drv.ms/b/s!Anr_tvZIYrhwgc9GYBGAGbHQCQqjzQ}{Certificado 1 {\footnotesize\faExternalLink}} \textbar\ \href{https://1drv.ms/u/s!Anr_tvZIYrhwgc8dRt9t2V22iKrg2g}{Certificado 2 {\footnotesize\faExternalLink}}
+\end{itemize}
 
 \end{document}
